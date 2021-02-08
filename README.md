@@ -1,6 +1,6 @@
 # gif-j
 
-gif-j is a simple, python-based gif viewer that utilizes tkinter to display the gif. It has no buttons, no extra fluff, just a window to display your gif of choice. Think of it as a way to spice up your desktop while studying, working, or anything really.. To run the program, simply cd into the gif-j directory and run python main.py in the command line. You can dynamically resize the window by left/right clicking on it.
+gif-j is a simple, python-based gif viewer that utilizes tkinter. It has no buttons, no extra fluff, just a window to display your gif of choice. Think of it as a way to spice up your desktop while studying, working, or anything really.. To run the program, simply cd into the gif-j directory and run python main.py in the command line. You can dynamically resize the window by left/right clicking on it.
 
 
 
