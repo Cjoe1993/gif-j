@@ -4,9 +4,23 @@ from random import choice
 import os
 import itertools
 
+
+
 root = tk.Tk()
-size = (500, 711) # Changing this tuple will modify both the image size and the window size together
-gif_file = 'sample_gif'
+size = [275, 385] 
+
+# Dynamically change window size with left/right click
+
+def leftclick(event): 
+	size[0]+=20
+	size[1]+=20
+
+def rightclick(event):
+	size[0]-=20
+	size[1]-=20
+	
+
+gif_file = '/home/jc/gif-jj/sample_gif'
 # Browse directory containing images to stitch together
 file_list = os.listdir(gif_file)
 file_list.sort() # Will be unordered unless sorted
@@ -30,23 +44,23 @@ class Application(tk.Frame):
 		self.create_widgets()
 		self.next_img()
 		self.update()
-		
+
 	def next_img(self):
 		"""
 		Iterate through images
 
 		"""
 		try:
-			img = next(images)
+			self.img = next(images)
 		except StopIteration:
 			return
 
 
-		img = Image.open(f'{gif_file}/{img}')
-		img = img.resize(size)
-		img = ImageTk.PhotoImage(img)
-		self.bg.img = img
-		self.bg['image'] = img
+		self.img = Image.open(f'{gif_file}/{self.img}')
+		self.img = self.img.resize(size)
+		self.img = ImageTk.PhotoImage(self.img)
+		self.bg.img = self.img
+		self.bg['image'] = self.img
 
 		
 	def create_widgets(self):
@@ -66,10 +80,17 @@ class Application(tk.Frame):
 		self.next_img()
 		root.after(25, self.update)
 
+
+
+
 		
 
 
 app = Application(master=root)
-root.geometry(f'{size[0]}'+'x'+f'{size[1]}')
-root.resizable(0,0)
+app.bg.bind("<Button-1>", leftclick)
+app.bg.bind("<Button-3>", rightclick)
+# root.geometry(f'{size[0]}'+'x'+f'{size[1]}')
+root.x = 275
+root.y = 375
+# root.resizable(0,0) # Uncomment to make window not resizable
 app.mainloop()
