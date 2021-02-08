@@ -6,7 +6,7 @@ import itertools
 
 root = tk.Tk()
 size = (500, 711) # Changing this tuple will modify both the image size and the window size together
-gif_file = 'gifs_2'
+gif_file = 'sample_gif'
 # Browse directory containing images to stitch together
 file_list = os.listdir(gif_file)
 file_list.sort() # Will be unordered unless sorted
