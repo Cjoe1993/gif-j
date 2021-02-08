@@ -27,7 +27,7 @@ Artist - Marie Spénale
 
 What I used to split the gif:
 
-https://ezgif.com/split
+Search gif to frame, find appropriate tool, split.
 
 
 
