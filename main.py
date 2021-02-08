@@ -20,7 +20,7 @@ def rightclick(event):
 	size[1]-=20
 	
 
-gif_file = '/home/jc/gif-jj/sample_gif'
+gif_file = 'sample_gif'
 # Browse directory containing images to stitch together
 file_list = os.listdir(gif_file)
 file_list.sort() # Will be unordered unless sorted
