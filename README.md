@@ -4,7 +4,7 @@ gif-j is a simple, python-based gif viewer that utilizes tkinter to display the 
 
 To display your gif, you will need to:
 
-1. Split gif into separate frames and place into the directory "gifs". (instruction below to do through a web tool)
+1. Split gif into separate frames and place into the directory "gifs". (instruction below to do so through a web tool)
 
 2. Resize accordingly by editing the size tuple in the main.py file
 
