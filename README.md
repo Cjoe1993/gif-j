@@ -27,7 +27,7 @@ Artist - Marie Spénale
 
 What I used to split the gif:
 
-Search gif to frame, find appropriate tool, split.
+Search for "gif to frame" using your favorite web browser, find the appropriate tool for you, and split! 
 
 
 
